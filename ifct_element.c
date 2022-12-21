@@ -135,7 +135,6 @@ int ifctele_getAge(void* obj)
 }
 
 //첫번쨰 장소인지, 두번쨰 장소인지
-//4번에 대한 내용(강의자료) 
 int ifctele_getHistPlaceIndex(void* obj, int index);
 unsigned int ifctele_getinfestedTime(void* obj);
 
@@ -149,11 +148,58 @@ void ifctele_printElement(void* obj)
 	printf("Age : %i\n", ptr->age);
 } 
 
+
 char* ifctele_getPlaceName(int placeIndex)
 {
 	return countryName[placeIndex];
 }
 
+
+//전파자를 추적하는 함수
+int track()
+{
+	present = scanf();
+	 while(현재환자가 존재하는 동안)
+	 {
+	 	전파자 = trackInfester(present);  //각 환자에 대해 감염가능 시점에 있었는지 여부를 확인하는 함수
+		 if(전파자가 존재하면)
+		 {
+		 	 printf("%i환자는 %i환자에게 전파됨\n", present, former);
+		 }
+		 else
+		     first = present;
+		 present = former;
+	 }
+	 
+	 for(int i=0; i < 환자수; i++)
+	 {
+	 	timeMet = isMet(present, i);
+		 if(timeMet > 0)
+		 {
+		 	if()
+		 	{
+		 		former = i;
+			}
+	     }
+	 }
+	 
+	 return former;
+	 
+}
+
+
+//시점 값을 통해 장소 배열의 index를 산출하는 함수  
+int convertTimeToIndex(int time, int infestedTime)
+{
+	int index = -1;
+	
+	if(time <= infestedTime && time >= infestedTime-N_HISTORY)
+	{
+		index = N_HISTORY-(infestedTime-time)-1;
+	}
+	
+	return index;
+}
 
 
 

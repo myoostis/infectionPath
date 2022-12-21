@@ -47,11 +47,15 @@ int main(int argc, const char * argv[]) {
     
     while(3 == fscanf("3가지 읽기",변수들))
     {
-    	 for(){
+    	 for
     	 	fscanf(5개 읽기);
     	 	
-    	ifct_element = ifctele_genElement(index, age, detected_time, history_place[N_HISTORY]);
-		 }
+    	 //환자정보를 구조체를 만드는 부분	
+    	 ifct_element = ifctele_genElement(index, age, detected_time, history_place[N_HISTORY]);
+    	 
+    	 //위에서 만든 구조체를 linked list에 넣는 부분 
+    	 ifct_addTail(ifct_element);
+    	
 	}
     
     
