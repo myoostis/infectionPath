@@ -2,7 +2,7 @@
 //  ifs_element.c
 //  InfestPath
 //
-//  Created by Juyeop Kim on 2020/10/20.
+//  Created by HyoJin Park on 2022/12/01
 //
 
 #include <stdio.h>
@@ -120,7 +120,8 @@ void* ifctele_genElement(int index, int age, unsigned int dectected_time, int hi
 	ptr = malloc();
 	ptr->index = index;
 	ptr->age = age;
-	//..
+	ptr->time = detected_time;
+	ptr->place = history_place[N_HISTORY];
 	
 	//free를 해줄 필요는 없음 : 만든것을 넘겨줘서 구조체를 만들어서 넘겨주는, 다시 사용해야하기 때문에 free(ptr)를 할 필요없음. 
 	return ptr;

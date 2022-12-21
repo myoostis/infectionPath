@@ -2,7 +2,7 @@
 //  main.c
 //  infestPath
 //
-//  Created by Juyeop Kim on 2022/10/20.
+//  Created by HyoJin Park on 2022/12/01
 //
 
 #include <stdio.h>
@@ -47,7 +47,11 @@ int main(int argc, const char * argv[]) {
     
     while(3 == fscanf("3가지 읽기",변수들))
     {
-    	for()
+    	 for(){
+    	 	fscanf(5개 읽기);
+    	 	
+    	ifct_element = ifctele_genElement(index, age, detected_time, history_place[N_HISTORY]);
+		 }
 	}
     
     
@@ -77,18 +81,22 @@ int main(int argc, const char * argv[]) {
                 printf("Exiting the program... Bye bye.\n");
                 break;
                 
+            //환자정보 하나를 출력하는 1번 부분 
             case MENU_PATIENT:
                 
                 break;
-                
+            
+            //특정 장소에서 감염된 환자를 전부 출력해라 
             case MENU_PLACE:
                 
                 break;
-                
+            
+            //특정 범위의 나이에 해당하는 환자의 정보를 전부 출력 
             case MENU_AGE:
                 
                 break;
-                
+            
+            //감염경로 및 최초 전파자 추적 
             case MENU_TRACK:
                     
                 break;

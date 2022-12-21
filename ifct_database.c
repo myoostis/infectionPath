@@ -2,7 +2,7 @@
 //  ifct_database.c
 //  Infection Path
 //  Database platform code for storing infest path elements
-//  Created by Juyeop Kim on 2022/10/20.
+//  Created by HyoJin Park on 2022/12/01
 //
 
 #include <stdio.h>

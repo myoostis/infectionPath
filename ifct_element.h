@@ -2,7 +2,7 @@
 //  ifct_element.h
 //  infection path
 //
-//  Created by Juyeop Kim on 2022/10/20.
+//  Created by HyoJin Park on 2022/12/01
 //
 
 #ifndef ifct_element_h

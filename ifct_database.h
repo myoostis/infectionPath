@@ -2,7 +2,7 @@
 // ifct_database.h
 // infection path
 //
-// Created on 2022/12/01
+// Created by HyoJin Park on 2022/12/01
 //
 
 #ifndef ifct_database_h
