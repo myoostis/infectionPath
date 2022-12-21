@@ -32,15 +32,15 @@ int main(int argc, const char * argv[]) {
     //1-1. FILE pointer open
     if (argc != 2)
     {
-        printf("[ERROR] syntax : infestPath (file path).");
-        return -1;
+         printf("[ERROR] syntax : infestPath (file path).");
+         return -1;
     }
     
     fp = fopen(argv[1],"r");
     if (fp == NULL)
     {
-        printf("[ERROR] Failed to open database file!! (%s)\n", argv[1]);
-        return -1;
+         printf("[ERROR] Failed to open database file!! (%s)\n", argv[1]);
+         return -1;
     }
     
     //1-2. loading each patient informations
@@ -82,32 +82,32 @@ int main(int argc, const char * argv[]) {
         switch(menu_selection)
         {
             case MENU_EXIT:
-                printf("Exiting the program... Bye bye.\n");
-                break;
+                 printf("Exiting the program... Bye bye.\n");
+                 break;
                 
             //환자정보 하나를 출력하는 1번 부분 
             case MENU_PATIENT:
                 
-                break;
+                 break;
             
             //특정 장소에서 감염된 환자를 전부 출력해라 
             case MENU_PLACE:
                 
-                break;
+                 break;
             
             //특정 범위의 나이에 해당하는 환자의 정보를 전부 출력 
             case MENU_AGE:
-                
-                break;
+                 int ifctele_getAge(void* obj);
+                 break;
             
             //감염경로 및 최초 전파자 추적 
             case MENU_TRACK:
-                    
-                break;
+                 int track();
+                 break;
                 
             default:
-                printf("[ERROR Wrong menu selection! (%i), please choose between 0 ~ 4\n", menu_selection);
-                break;
+                 printf("[ERROR Wrong menu selection! (%i), please choose between 0 ~ 4\n", menu_selection);
+                 break;
         }
     
     } while(menu_selection != 0);
