@@ -158,7 +158,7 @@ char* ifctele_getPlaceName(int placeIndex)
 //전파자를 추적하는 함수
 int track()
 {
-	present = scanf();
+	int present = scanf();
 	 while(현재환자가 존재하는 동안)
 	 {
 	 	전파자 = trackInfester(present);  //각 환자에 대해 감염가능 시점에 있었는지 여부를 확인하는 함수
@@ -170,22 +170,43 @@ int track()
 		     first = present;
 		 present = former;
 	 }
-	 
+ 
+}
+
+int trackInfester(int present)
+{
 	 for(int i=0; i < 환자수; i++)
 	 {
-	 	timeMet = isMet(present, i);
-		 if(timeMet > 0)
+	 	timeMet = isMet(present, i); //두 환자가 만난 시간을 산출하는 함수 
+		 if(timeMet > 0) //만난 경우  
 		 {
-		 	if()
+		 	if() //지금까지 환자 중 만난시간이 가장 이른지 판단하는 부분  
 		 	{
 		 		former = i;
 			}
 	     }
+	     else
+	         return -1; //만나지 않은 경우 -1을 리턴한다  
 	 }
 	 
 	 return former;
+} 
+
+int isMet(int present, int i)
+{
+	 for(i=2; i<N_HISTORY; i++)
+	 {
+		 //현재환자의 i번쨰 이동장소 시점을 계산하는 부분;
+		 //계산된 시점에서의 대상환자 이동장소 계산하는 부분;
+		 if(place[i] == place[대상환자])
+		 {
+		 	timeMet = convertTimeToIndex(time, infestedTime);
+		 } 
+	 } 
 	 
+	 return timeMet; 
 }
+
 
 
 //시점 값을 통해 장소 배열의 index를 산출하는 함수  
